@@ -897,7 +897,8 @@ public class SlidingUpPanelLayout extends ViewGroup {
      * @return true if the pane was slideable and is now expanded/in the process of expanding
      */
     public boolean expandPanel(float slideOffset) {
-        if (mSlideableView == null || (mSlideState == PanelState.EXPANDED && slideOffset == 1.0f)) return false;
+        //if (mSlideableView == null || (mSlideState == PanelState.EXPANDED && slideOffset == 1.0f)) return false;
+        if (mSlideableView == null) return false;
         mSlideableView.setVisibility(View.VISIBLE);
         return expandPanel(mSlideableView, 0, slideOffset);
     }
